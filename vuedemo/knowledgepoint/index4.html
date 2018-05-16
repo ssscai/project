@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+  <script src="./vue-router.js"></script>
+  <script>
+    window.onload=function(){
+      // 1.声明路由
+      let r1=new VueRouter({
+        routes:[
+          {
+            path:'/user/:id',component:{
+              template:`<div>用户列表:当前用户id{{this.$route.params.id}}</div>`,
+              beforeRouteEnter(to,from,next){
+                console.log('to',to)
+                console.log('from',from)
+                next();
+              }  
+            }
+          },
+          {
+            path:'/article/:id',component:{template:`<div>文章列表:当前用户id{{this.$route.params.id}}</div>`}
+          },
+          {
+            path:'/comment/:id',component:{template:`<div>评论列表:当前用户id{{this.$route.params.id}}</div>`}
+          }
+        ]
+      })
+      // 2.调用路由
+      let vm=new Vue({
+        el:'#box',
+        router:r1,
+        // watch:{
+        //   '$route'(newval,oldval){
+        //     alert(`路由从${oldval.params.id}变为${newval.params.id}`)
+        //   }
+        // }
+      })
+    }
+  </script>
+  <style>
+  .router-link-active{
+    background:red;color:#fff;
+  }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <router-link to="/user/123">用户</router-link>
+    <router-link to="/article/456">文章</router-link>
+    <router-link to="/comment/789">评论</router-link>
+    <router-view></router-view>
+  </div>
+</body>
+</html>

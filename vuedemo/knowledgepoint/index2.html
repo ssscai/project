@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+  <script>
+    window.onload=function(){
+      let vm=new Vue({
+        el:'.box',
+        data:{
+          a:0,
+          b:0,
+          show:true,
+          json:{
+            "a":"sss",
+            "b":"ttt"
+          },
+          string:'abddfggggsergg',
+          n:10
+        },
+        methods:{
+          fn(){
+            this.show=!this.show
+          }
+        },
+        watch:{
+          a(newval,oldval){
+            console.log(`a从${oldval}变为${newval}`)
+          }
+        }
+      })
+    }
+  </script>
+</head>
+<body>
+  <div class="box">
+    <input type="text" class="text" v-model="a"> 
+    <button @click='fn'>按钮</button>
+        <div class="box" v-if="show" style="width:300px;height:30px;background:yellowgreen"></div>
+        <ul>
+          <li v-for="item in json">{{item}}</li>
+          <li v-for="item in string">{{item}}</li>
+          <li v-for="item in n">{{item}}</li>
+        </ul>
+  </div>
+</body>
+</html>

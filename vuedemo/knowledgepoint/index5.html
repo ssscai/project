@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>子路由</title>
+  <script src="./vue.js"></script>
+  <script src="./vue-router.js"></script>
+  <script>
+    window.onload=function(){
+      //声明路由：
+      let r1=new VueRouter({
+        routes:[
+          {
+            path:"/user",
+            component:{
+              template:'<div>ssss<router-view></router-view></div>'
+            },
+            children:[
+              {
+                path:"info",
+                component:{
+                  template:'<div>tttt<router-view></router-view></div>'
+                },
+                children:[
+                  {
+                    path:'list',
+                    component:{
+                      template:'<div>mmm</div>'
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      })
+    
+      //调用路由：
+      let vm=new Vue({
+        el:'.box',
+        router:r1
+      })
+    }
+  </script>
+</head>
+<body>
+  <div class="box">
+    <router-link to="/user">用户</router-link>
+    <router-view></router-view>
+  </div>
+
+</body>
+</html>

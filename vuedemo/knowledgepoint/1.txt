@@ -1,0 +1,48 @@
+vue表达式：只能在标签的内容里面。
+绑定html元素的属性：v-bind：属性='a';
+                        :属性='a';
+
+不能在vue中用原生的东西，也不能在原生中用vue的东西。
+
+添加事件：
+v-on:click="fn"  @click="fn"
+
+双向数据绑定：v-model    很重要
+
+
+v-bind v-model v-on v-for
+
+虚拟dom:
+
+v-html：对整个标签进行渲染。
+
+计算属性：computed  同步的操作  作用：受控制的访问--get/set
+
+监听：watch 当数据变化的时候，有通知。  适合异步的操作
+
+修饰符：@keydown.enter  @submit.prevent
+
+v-if 删除，插入dom节点
+v-show 显示，隐藏 display:none/display:block;
+
+v-for 可以跟，可以循环数组array,json,string,number
+
+v-cloak  网速慢，用户看到渲染前的源码
+优化使用：
+v-once ：仅仅渲染一次
+c-pre 禁用标签里面的表达式
+
+vue-router  把一个大的程序划分为几个小块
+
+<router-view></router-view> //路由渲染的地方
+<router-link></router-link> //相当于a
+
+//js操作router
+
+路由对象：
+1.path
+2.component 路由主体
+3.children  子路由
+*路径
+
+命名路由：name

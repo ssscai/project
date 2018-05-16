@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+  <script>
+      window.onload=function(){
+        let vm=new Vue({
+          el:'.box',
+          data:{
+            text:'sss',
+            a:5,
+            b:2,
+            arr:[
+              {
+                name:'zs',age:18,gender:'男'
+              },
+              {
+                name:'li',age:28,gender:'男'
+              },
+              {
+                name:'wu',age:38,gender:'男'
+              }
+            ],
+            html:'aaaa<b>tttt</b>cccc',
+          k:0,
+          l:0
+    
+          },
+          methods:{
+            fn(){
+              this.a++
+            }
+          },
+          computed:{
+            m(){  //getter
+              return 455;
+            },
+            n:{
+              get(){
+
+              },
+              set(){
+
+              }
+            },
+            num1:{
+              get:function(){
+                return this.k;
+              },
+              set(newVal){
+                let newnew=parseInt(newVal);
+                if(newnew<0){
+                  newnew=0;
+                }
+                return this.k=newnew;
+              }
+            },
+            num2:{
+              get:function(){
+                return this.l;
+              },
+              set:function(newVal){
+                return this.l=parseInt(newVal)
+              }
+            }
+          }
+        })
+        setInterval(function(){
+          vm.a++;
+        },1000)
+      }
+  </script>
+</head>
+<body>
+  <div class="box" :title="text">
+    {{text}} {{a+b}}
+    <input type="button" value="点击" v-on:click="fn"><br/>
+    {{a}}<input type="text" class="text" v-model="a">
+    <ul>
+      <li v-for="(item,index) in arr" @key='index'>{{item.name}} {{item.age}}</li>
+    </ul>
+    <p>{{html}}</p>
+    <span v-html='html'></span>
+    <div>{{m}}</div>
+    <div class="add">
+      <input type="text" class="text" v-model="num1">
+      <input type="text" class="text" v-model="num2">
+      {{num1+num2}}
+    </div>
+  </div>
+</body>
+</html>
