@@ -1,0 +1,306 @@
+[
+  {
+    id: "-1",
+    title: "按排序",
+    default_tag: "1",
+    can_tag_delete: "0",
+    tags: [{
+        id: "1",
+        title: "最新更新",
+        param: "order=n&contype=0",
+        position: "-1|1"
+      },
+      {
+        id: "2",
+        title: "最高人气",
+        param: "order=t&contype=0",
+        position: "-1|2"
+      },
+      {
+        id: "3",
+        title: "最受好评",
+        param: "order=g&contype=0",
+        position: "-1|3"
+      }
+    ]
+  },
+  {
+    id: "0",
+    title: "快捷",
+    default_tag: "-1",
+    can_tag_delete: "0",
+    tags: [{
+        id: "-1",
+        title: "精选",
+        param: "",
+        position: ""
+      },
+      {
+        id: "0",
+        title: "全部",
+        param: "",
+        position: ""
+      },
+      {
+        id: "1",
+        title: "好莱坞",
+        param: "type=75168",
+        position: ""
+      },
+      {
+        id: "2",
+        title: "剧情",
+        param: "type=210071",
+        position: ""
+      },
+      {
+        id: "3",
+        title: "爱情",
+        param: "type=210072",
+        position: ""
+      },
+      {
+        id: "4",
+        title: "喜剧",
+        param: "type=210073",
+        position: ""
+      },
+      {
+        id: "5",
+        title: "新香港电影",
+        param: "contype=0",
+        position: "2|2#3|1"
+      }
+    ]
+  },
+  {
+    id: "1",
+    title: "按类型",
+    default_tag: "210042",
+    can_tag_delete: "0",
+    tags: [{
+        id: "0",
+        title: "全部",
+        param: "",
+        position: ""
+      },
+      {
+        id: "210042",
+        title: "电影",
+        param: "type=210042",
+        position: "1|210042",
+        subtags: [{
+            id: "0",
+            title: "全部",
+            param: ""
+          },
+          {
+            id: "211462",
+            title: "国内院线",
+            param: "type=211462"
+          },
+          {
+            id: "211463",
+            title: "好莱坞",
+            param: "type=211463"
+          },
+          {
+            id: "211464",
+            title: "网络大电影",
+            param: "type=211464"
+          },
+          {
+            id: "210071",
+            title: "剧情",
+            param: "type=210071"
+          },
+          {
+            id: "210072",
+            title: "爱情",
+            param: "type=210072"
+          },
+          {
+            id: "210073",
+            title: "喜剧",
+            param: "type=210073"
+          },
+          {
+            id: "210074",
+            title: "动作",
+            param: "type=210074"
+          },
+          {
+            id: "210075",
+            title: "悬疑",
+            param: "type=210075"
+          },
+          {
+            id: "210079",
+            title: "惊悚",
+            param: "type=210079"
+          },
+          {
+            id: "210081",
+            title: "家庭",
+            param: "type=210081"
+          },
+          {
+            id: "210082",
+            title: "动画",
+            param: "type=210082"
+          },
+          {
+            id: "211333",
+            title: "奇幻",
+            param: "type=211333"
+          }
+        ]
+      },
+      {
+        id: "211262",
+        title: "电视剧",
+        param: "type=211262",
+        position: "1|211262",
+        subtags: [{
+            id: "0",
+            title: "全部",
+            param: ""
+          },
+          {
+            id: "211637",
+            title: "网剧",
+            param: "type=211637"
+          }
+        ]
+      },
+      {
+        id: "75180",
+        title: "综艺",
+        param: "type=75180",
+        position: "1|75180"
+      }
+    ]
+  },
+  {
+    id: "2",
+    title: "按地区",
+    default_tag: "0",
+    can_tag_delete: "0",
+    tags: [{
+        id: "0",
+        title: "全部",
+        param: "",
+        position: ""
+      },
+      {
+        id: "1",
+        title: "大陆",
+        param: "ntags=大陆:area|",
+        position: "2|1"
+      },
+      {
+        id: "2",
+        title: "香港",
+        param: "ntags=香港:area|",
+        position: "2|2"
+      },
+      {
+        id: "3",
+        title: "台湾",
+        param: "ntags=台湾:area|",
+        position: "2|3"
+      },
+      {
+        id: "4",
+        title: "韩国",
+        param: "ntags=韩国:area|",
+        position: "2|4"
+      },
+      {
+        id: "5",
+        title: "美国",
+        param: "ntags=美国:area|",
+        position: "2|5"
+      },
+      {
+        id: "6",
+        title: "英国",
+        param: "ntags=英国:area|",
+        position: "2|6"
+      },
+      {
+        id: "7",
+        title: "法国",
+        param: "ntags=法国:area|",
+        position: "2|7"
+      },
+      {
+        id: "8",
+        title: "其他",
+        param: "ntags=其他:area|",
+        position: "2|8"
+      }
+    ]
+  },
+  {
+    id: "3",
+    title: "按年代",
+    default_tag: "0",
+    can_tag_delete: "0",
+    tags: [{
+        id: "0",
+        title: "全部",
+        param: "",
+        position: ""
+      },
+      {
+        id: "1",
+        title: "2013",
+        param: "ntags=2013:area|",
+        position: "3|1"
+      },
+      {
+        id: "2",
+        title: "2012",
+        param: "ntags=2012:year|",
+        position: "3|2"
+      },
+      {
+        id: "4",
+        title: "2010",
+        param: "ntags=2010:year|",
+        position: "3|4"
+      },
+      {
+        id: "3",
+        title: "2011",
+        param: "ntags=2011:year|",
+        position: "3|3"
+      },
+      {
+        id: "6",
+        title: "2008",
+        param: "ntags=2008:year|",
+        position: "3|6"
+      },
+      {
+        id: "5",
+        title: "2009",
+        param: "ntags=2009:year|",
+        position: "3|5"
+      },
+      {
+        id: "8",
+        title: "2006",
+        param: "ntags=2006:year|",
+        position: "3|8"
+      },
+      {
+        id: "9",
+        title: "更早",
+        param: "ntags=更早:year|",
+        position: "3|9"
+      }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="box" style="width:300px;height:300px;background:yellowgreen"></div>
+  <script>
+    function deepCopy(obj) {
+      let result = {};
+      for (let key in obj) {
+        if (obj[key] instanceof Object || obj[key] instanceof Array) {
+          result[key] = deepCopy(obj[key])
+        } else {
+          result[key] = obj[key]
+        }
+      }
+      return result;
+    }
+    var obj={
+      a:1,
+      b:'sss',
+      c:[1,2,3],
+      d:{
+        m:2,
+        n:3
+      }
+    }
+    var st=deepCopy(obj);
+    console.log(st);
+    var targetObj={
+      k:123,
+      l:'ss'
+    }
+    console.log(JSON.stringify(targetObj),'JSON.stringify(targetObj)');
+    //JSON.stringify() 方法用于将 JavaScript 值转换为 JSON 字符串。
+    //JSON.parse() 方法用于将一个 JSON 字符串转换为对象。
+    var mn=JSON.parse(JSON.stringify(targetObj))
+    console.log(mn,'mnmn');
+    var op=Object.assign(targetObj);
+    console.log(op,'opop')
+  </script>
+</body>
+
+</html>

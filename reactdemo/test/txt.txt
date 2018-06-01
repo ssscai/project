@@ -19,3 +19,17 @@ redux专注于状态管理和react解耦
 
 核心概念：store,state,action,reducer
 
+首先新建reducer  新建store,随时通过store.getState获取状态
+需要状态变更store.dispatch(action)来修改状态 
+reducer函数接受state和action，返回新的state,可以用store.subscribe监听每次修改
+
+
+
+store.dispatch方法传递给组件，内部可以调用修改状态
+subscribe 订阅render函数，每次修改都重新渲染
+redux 相关内容，移到单独的文件index.redux.js单独管理
+
+
+路由：BrowserRouter 包裹整个应用
+Router路由对应渲染的组件，可嵌套
+Link 调转专用
